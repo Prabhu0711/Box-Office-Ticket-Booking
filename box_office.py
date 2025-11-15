@@ -1,5 +1,3 @@
-# Simple Box Office Ticket Booking System
-
 movies = {
     "1": {"name": "Jawan", "price": 150, "seats": 50},
     "2": {"name": "Salaar", "price": 180, "seats": 40},
@@ -35,10 +33,9 @@ def book_ticket():
         print("Not enough seats available!")
         return
 
-    # Payment calculation
     total_cost = count * movie["price"]
-
     movie["seats"] -= count
+
     print(f"\n🎉 Booking Successful!")
     print(f"Movie: {movie['name']}")
     print(f"Tickets: {count}")
@@ -64,5 +61,4 @@ def main():
         else:
             print("Invalid choice! Try again.")
 
-# Run the program
 main()
